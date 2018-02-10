@@ -14,3 +14,5 @@ we can use hashing and convert unique ids into hash strings and then store the i
 For processing and checking 1million unique ids:
 
 Method 1. we can use a byte array where byte arr[q] represents a unique number such that where number X is divided by 8,i.e, X/8 will result in quotient q and remainder r ..which will indicate that byte arr[q] will have r'th bit as ON .
+
+These image ids logic can be processed and stored in RAM and other RAM space can be used to store images and can be refreshed using LRU cache algorithm for faster retrieval of images.
