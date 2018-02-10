@@ -1,0 +1,16 @@
+4bytes * 1million = 4MB
+100kb * 1million = 100GB
+
+For storing the images in an NTFS file system.:
+
+Method 1:
+we can use any algorithm/logic to get a dedicated path.
+eg: 12345678 as it is 8-digit number. split it : 1234-5678 and then divide first half by 8 or 10. and get the parent directory. eg 1234/8 = 154. and same for 2nd hlf ,ie, 5478/8 = 684. so path can be images/154/684/12345678.png. 
+
+Method 2:
+
+we can use hashing and convert unique ids into hash strings and then store the images with prefix directories such as if hash is 'cfeee31456733ioffde' then we can store as c/cf/image_id.png
+
+For processing and checking 1million unique ids:
+
+Method 1. we can use a byte array where byte arr[q] represents a unique number such that where number X is divided by 8,i.e, X/8 will result in quotient q and remainder r ..which will indicate that byte arr[q] will have r'th bit as ON .
